@@ -135,6 +135,7 @@ int main()
 
 # Week07
 ## step01-1
+long long int 那我們便能回來複習最大公因數了。數字範圍再大一點, 結果要算好久  暴力法
 ```
 #include <stdio.h>
 int main()
@@ -154,5 +155,28 @@ int main()
 
 # Week07
 ## step01-2
+輾轉相除法  long long int 很長很長的整數。口訣是 老大a, 老二b 可以算出 老三c=a%b, 如果老三c是0, 老二b就是答案
+```
+#include <stdio.h>
+int main()
+{
+    long long int a, b,c;
+    scanf("%lld%lld", &a, &b);
+
+    while(1)
+    {
+        c=a%b;
+        printf("%lld%lld%lld\n", a, b, c);
+        if(c==0) break;
+        a=b;
+        b=c;
+    }
+    printf("答案是:%lld\n", b);
+}
+```
+
+# Week07
+## step01-3
+
 
 
