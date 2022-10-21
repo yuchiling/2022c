@@ -117,3 +117,42 @@ int main()
 
 }
 ```
+
+# Week07
+## step01-0
+復習之前教過的int整數型別, 只有32-bit,最多只能裝2,147,483,647, 所以很長很長的整數, 要用 long long int
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=1234567812345678;
+    printf("%d\n", n);
+
+    long long int a=1234567812345678;
+    printf("%lld\n", a);
+}
+```
+
+# Week07
+## step01-1
+```
+#include <stdio.h>
+int main()
+{
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+
+    long long int ans;
+    for(long long int i=1; i<=a; i++)
+    {
+        if(a%i==0 && b%i==0 ) ans =i;
+
+    }
+    printf("答案是:%lld\n", ans);
+}
+```
+
+# Week07
+## step01-2
+
+
