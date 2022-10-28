@@ -191,6 +191,94 @@ int main()
 }
 ```
 
+# Week08
+## step01-0
+2個 while迴圈 來畫出直角三角形(有空格、有星星)所以先用 for迴圈來思考
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    for(int i=1; i<=n; i++)
+    {
+        for(int k=1; k<=n; k++)
+        {
+            if(k<=n-i) printf(" ");
+            else printf("*");
+
+        }
+        printf("\n");
+    }
+
+}
+```
+## step01-1
+只能使用2個while迴圈, 去寫出有空格、有星星的直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	int i=1;
+	while(i<=n)
+	{
+		int k=1;
+		while(k<=n)
+		{
+			if(k<=n-i) printf(" ");
+			else printf("*");
+			k++;
+		}
+		printf("\n");
+		i++;
+	}
+}
+```
+
+## step01-2
+質數判別,能不能被整除。被整除, 就不是質數, 所以就這樣反過來想即可
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("要判斷你輸入的數字是不是很孤僻的質數:");
+    int n;
+    scanf("%d", &n);
+    int bad=0;
+    for(int i=2; i<n; i++)
+    {
+        if(n%i==0)bad=1;
+    }
+    if(bad==0) printf("%d 是質數(沒有壞掉)", n);
+    else printf("%d 不是質數(早就壞掉了)", n);
+}
+```
+
+## step01-3
+"列出質數" 用 for迴圈列出 2到a 的所有質數
+ ```cpp
+ #include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	
+	for(int n=2; n<=a; n++)
+	{
+		int bad=0;
+		for(int i=2; i<n; i++)
+		{
+			if(n%i==0) bad=1;
+		}
+		if(bad==0) printf("%d ", n);
+	}
+}
+```
+
+
+
 
 
 
