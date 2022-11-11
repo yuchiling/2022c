@@ -295,10 +295,11 @@ int main()
 
 ## step01-1
 用篩子法快速把全部質數找出來,我們先用 for迴圈 + 陣列
-#include <stdio.h>
+
 int main()
 ```cpp
 {
+    #include <stdio.h>
     int a[4] ={10, 20, 30, 40};
 
     for(int i=0; i<4; i++)
