@@ -294,6 +294,7 @@ int main()
 ```
 
 ## step01-1
+用篩子法快速把全部質數找出來,我們先用 for迴圈 + 陣列
 #include <stdio.h>
 int main()
 ```cpp
