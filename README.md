@@ -313,6 +313,52 @@ int main()
 }
 ```
 
+# Week11
+## step01-0
+想要將3個數字從小到大排好時,我們需要一個技巧-交換 int temp=a; a=b; b=temp; 
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=90, b=80;
+    printf("a:%d b:%d\n", a, b);
+
+    int t=a;
+    a=b;
+    b=t;
+    printf("a:%d b=%d\n", a, b);
+}
+```
+
+## step01-1
+三數排序的部分,使用的口訣是「比大小,不對就交換」, 先把 a b 比, 再把 b c 比, 最重的已經沉到最下面
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=90, b=80, c=70;
+    if(a>b)
+    {
+        int temp=a;
+        a=b;
+        b=temp;
+    }
+    if(b>c)
+    {
+        int temp=b;
+        b=c;
+        c=temp;
+    }
+    if(a>b)
+    {
+        int temp=a;
+        a=b;
+        b=temp;
+    }
+    printf("a:%d b:%d c:%d", a, b, c);
+}
+```
+
 
 
 
