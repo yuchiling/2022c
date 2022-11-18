@@ -358,9 +358,61 @@ int main()
     printf("a:%d b:%d c:%d", a, b, c);
 }
 ```
-## step01-3
+## step01-2
 只要比相鄰的、不對就交換,程式碼能簡化。本題試著做10數排序,使用攝影師拍團體照時調整高低的方法,口訣「從左到右巡一輪,兩兩比較,不對就交換」會發現最肥的數字慢慢移到右邊了
 ```cpp
+
+
+## step01-3
+只把「最肥的數字」移到右邊,因此,我們就用 Ctrl-C 的方法 貼很多次, 並逐一印出來,觀察它的變化,越排越多都排好了
+```cpp
+
+#include <stdio.h>
+int main()
+{
+    int a[10]={90, 80, 70, 60, 50, 40, 30, 20, 10, 0};
+    for(int i=0; i<10; i++)
+    printf("%d ", a[i]);
+    printf("\n");
+
+    for(int i=0; i<10-1; i++)
+    {
+        if(a[i]>a[i+1])
+        {
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0; i<10; i++)
+    printf("%d ", a[i]);
+    printf("\n");
+    for(int i=0; i<10-1; i++)
+    {
+        if(a[i]>a[i+1])
+        {
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0; i<10; i++)
+    printf("%d ", a[i]);
+    printf("\n");
+    for(int i=0; i<10-1; i++)
+    {
+        if(a[i]>a[i+1])
+        {
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+    }
+    for(int i=0; i<10; i++)
+    printf("%d ", a[i]);
+    printf("\n");
+}
+
 
 
 
