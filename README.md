@@ -477,6 +477,62 @@ int main()
 
 
 
+# Week13
+## step01-0
+實習課的題目「買賣股票的最佳時機」
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a[100];
+	int n;
+	scanf("%d", &n);
+
+	for(int i=0; i<n; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+
+	int left, right;
+	int ans=-9999999;
+	for(int i=0; i<n; i++)
+	{
+		for(int j=i+1; j<n; j++)
+		{
+			if(a[j] - a[i] > ans)
+			{
+				ans=a[j]-a[i];
+				left=a[i];
+				right=a[j];
+			}
+		}
+	}
+	printf("請按任意鍵繼續 . . . \n");
+	printf("最大利潤=%d-%d=%d\n", right, left, ans);
+}
+```
+
+## step01-1
+Fibonacci數列,與黃金比例有關係,也與A4白紙的比例有點關係。不過重點就是 a[i] = a[i-1] + a[i-2]; 接著for迴圈的範圍就要想一下, 要從2開始, 不然a[i-2]會有負數在裡面而出錯。在 a[0] a[1] 也要先手動填好。最後全部印出來(不要印太多, 不然會overflow爆炸)
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[50];
+    a[0]=0;
+    a[1]=1;
+    for(int i=2; i<45; i++)
+    {
+        a[i] = a[i-1] + a[i-2];
+
+    }
+    for(int i=0; i<45; i++)
+    {
+        printf("%d ", a[i]);
+
+    }
+}
+```
 
 
 
