@@ -567,6 +567,28 @@ int main()
     printf("%c : %d\n", 'a', 'a');
 }
 ```
+#step02-2
+ASCII 美國國家標準資訊交換 使用 %c 及 %d 印出 65 66 67 及 97 98 99 等值, 對照 'A' 'B' 'C' 與 'a' 'b' 'c' 等
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("=%c=%d=\n", 65, 65);
+    printf("=%c=%d=\n", '+', '+');
+    printf("=%c=%d=\n", '\n', '\n');
+    printf("=%c=%d=\n", '\t', '\t');
+    printf("=%c=%d=\n", '\0', '\0');
+
+    char line[] = "Hello World AAA";
+    for(int i=0;     ; i++)
+    {
+        char c = line [i];
+        if(c==0) break;
+        printf("=%c", c);
+    }
+
+}
+```
 
 
 
