@@ -15,7 +15,7 @@ void mousePressed()
 }
 void myHeart(int dx, int dy)
 {
-    for(int i=0; i<300; i++)\
+    for(int i=0; i<300; i++)
     {
         for(int j=0; j<400; j++)
         {
